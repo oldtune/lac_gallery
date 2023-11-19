@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import ExternalScripts from '../components/ExternalScripts.astro'
+import Footer from '../components/Footer.astro'
+import Gallery from '../components/Gallery.astro'
+import Header from '../components/Header.astro'
+
+let title = 'Tiệm cà phê Lạc'
+let description = 'Tiệm cà phê Lạc'
+---
+
+<!doctype html>
+<html lang="en">
+  <BaseHead
+    title={title}
+    description={description}
+    author={'AREA44'}
+    og={'og-image.jpg'}
+  />
+
+  <body class="is-preload">
+    <Header title={title} />
+    <Footer title={title} description={description} />
+    <Gallery title={title} />
+    <ExternalScripts />
+  </body>
+</html>

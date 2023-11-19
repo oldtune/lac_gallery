@@ -1,0 +1,34 @@
+---
+let imageFiles: any[] = []
+const response = await fetch('https://4rtiajugwy.ap-southeast-1.awsapprunner.com/api/gallery')
+const data: any[] = await response.json()
+if (data) {
+  console.log(data)
+  imageFiles = data
+}
+---
+
+<div id="main">
+  {
+    imageFiles.map((img) => (
+      <article class="thumb">
+        <a class="image carved-in" href="#">
+          <img
+            src={img.link}
+            width="1200"
+            height="750"
+            alt="Lạc's Memories"
+            decoding="async"
+            loading="lazy"
+          />
+        </a>
+        <h2>{img.date}</h2>
+        <p class="overflow-auto">{img.date}</p>
+      </article>
+    ))
+  }
+</div>
+
+<script>
+  let page = 0
+</script>
