@@ -334,5 +334,3 @@ function addPopTrox() {
     windowMargin: 50,
   });
 }
-
-//trigger
